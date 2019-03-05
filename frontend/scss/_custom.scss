@@ -1,5 +1,148 @@
-.header {
-    height:             100%;
-    height:             100vh;
-    background-image:   url("/web/images/background.jpg");
+$body-bg: rgb(12, 12, 12);
+$body-color: lightgray;
+//$font-family-sans-serif: 'Roboto';
+
+@mixin linx ($link, $hover) {
+    a {
+        color: rgba($link, .5);
+        text-decoration: none;
+        &:visited {
+            color: rgba($link, .5);
+            text-decoration: none;
+        }
+        &:hover {
+            color: $hover;
+            text-decoration: none;
+        }
+        &:active {
+            color: $hover;
+            text-decoration: none;
+        }
+    }
+}
+
+body {
+    @include linx(white, #dbae59);
+}
+
+h1 {
+    color: #dbae59;
+    font-family: 'Cinzel';
+}
+
+.mainHeader {
+    height: 100%;
+    height: 100vh;
+}
+
+.logoHeader {
+    content: url("../../web/images/logo-gold.png");
+}
+
+@media (max-width: 576px) {
+    .mainHeader {
+        position: relative;
+    }
+    .mainHeader .logoHeader {
+        content: url("../../web/images/logo-gold-vertical.png");
+        height: 80vh;
+        object-fit: scale-down;
+        position: absolute;
+        top: 16.4vh;
+    }
+}
+
+@media (max-width: 576px) and (max-height: 576px) {
+    .mainHeader .logoHeader {
+        content: url("../../web/images/logo-gold.png");
+    }
+}
+
+@media (max-width: 358px) {
+    #mainNav .navbar-brand {
+        width: 69%;
+    }
+    #mainNav .navbar-brand img {
+        width: 100%;
+    }
+}
+
+#mainNav {
+    min-height: 56px;
+    background-color: rgb(24, 24, 24);
+}
+
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: #dbae59;
+    border: 1px solid #dbae59;
+}
+
+#mainNav .navbar-toggler:focus {
+    outline: none;
+}
+
+#mainNav .navbar-brand {
+    color: #dbae59;
+    padding: .9rem 0;
+}
+
+#mainNav .navbar-nav .nav-item:hover {
+    color: fade(#dbae59, 80%);
+    outline: none;
+    background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+#mainNav .navbar-collapse .nav-link:hover {
+    color: #dbae59;
+}
+  
+@media (min-width: 992px) {
+    #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        background-color: transparent;
+        -webkit-transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    #mainNav .navbar-brand {
+        padding: .5rem 0;
+    }
+    #mainNav .nav-link {
+        -webkit-transition: none;
+        transition: none;
+        padding: 2rem 1.5rem;
+    }
+    #mainNav .nav-link:hover {
+        color: #dbae59
+    }
+    #mainNav.navbar-shrink {
+        background-color: rgb(24, 24, 24);
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        color: #dbae59;
+    }
+    #mainNav.navbar-shrink .nav-link {
+        padding: 1.5rem 1.5rem 1.25rem;
+        border-bottom: 0.25rem solid transparent;
+    }
+    #mainNav.navbar-shrink .nav-link:hover {
+        color: #dbae59;
+    }
+    #mainNav.navbar-shrink .nav-link.active {
+        outline: none;
+        border-bottom: 0.25rem solid #dbae59;
+    }
+}
+
+.music {
+    text-align: center;
+    background-color: rgb(18, 18, 18);
 }
