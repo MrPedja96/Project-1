@@ -1,13 +1,22 @@
-$body-bg: rgb(12, 12, 12);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$body-bg: #0c0c0c; //gold 0c0c0c crimson e9e9e9
 $body-color: lightgray;
-//$font-family-sans-serif: 'Roboto';
+$font-family-sans-serif: 'Roboto';
+$navfoot: #181818; //gold 181818 crimson ddd
+$linkx: gray;
+$xolor: #dbae59; //gold dbae59 / crimson b22a2a
+$xolor2: #80693f; //gold 80693f / crimson 591515  //rgba($xolor, .5);
 
 @mixin linx ($link, $hover) {
     a {
-        color: rgba($link, .5);
+        color: $link;
         text-decoration: none;
         &:visited {
-            color: rgba($link, .5);
+            color: $link;
             text-decoration: none;
         }
         &:hover {
@@ -18,16 +27,20 @@ $body-color: lightgray;
             color: $hover;
             text-decoration: none;
         }
+        &:focus {
+            color: rgba($hover, .5);
+            text-decoration: none;
+        }
     }
 }
 
 body {
-    @include linx(white, #dbae59);
+    @include linx($linkx, $xolor);
 }
 
 h1 {
-    color: #dbae59;
     font-family: 'Cinzel';
+    color: $xolor;
 }
 
 .mainHeader {
@@ -58,6 +71,32 @@ h1 {
     }
 }
 
+@media (max-width: 576px) and (min-height: 768px) {
+    .mainHeader {
+        position: relative;
+    }
+    .mainHeader .logoHeader {
+        content: url("../../web/images/logo-gold-vertical.png");
+        height: 80vh;
+        object-fit: scale-down;
+        position: absolute;
+        top: 15.4vh;
+    }
+}
+
+@media (max-width: 576px) and (min-height: 992px) {
+    .mainHeader {
+        position: relative;
+    }
+    .mainHeader .logoHeader {
+        content: url("../../web/images/logo-gold-vertical.png");
+        height: 80vh;
+        object-fit: scale-down;
+        position: absolute;
+        top: 14.4vh;
+    }
+}
+
 @media (max-width: 358px) {
     #mainNav .navbar-brand {
         width: 69%;
@@ -69,14 +108,14 @@ h1 {
 
 #mainNav {
     min-height: 56px;
-    background-color: rgb(24, 24, 24);
+    background-color: $navfoot;
 }
 
 #mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.75rem;
-    color: #dbae59;
-    border: 1px solid #dbae59;
+    color: $xolor;
+    border: 1px solid $xolor;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -84,23 +123,20 @@ h1 {
 }
 
 #mainNav .navbar-brand {
-    color: #dbae59;
+    color: $xolor;
     padding: .9rem 0;
 }
 
-#mainNav .navbar-nav .nav-item:hover {
-    color: fade(#dbae59, 80%);
-    outline: none;
-    background-color: transparent;
-}
-
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-    outline: none;
-    background-color: transparent;
-}
-
 #mainNav .navbar-collapse .nav-link:hover {
-    color: #dbae59;
+    color: $xolor;
+}
+
+#mainNav .navbar-nav .nav-link.active {
+    color: $xolor;
+}
+
+.logoNav {
+    content: url("../../web/images/logo-gold.svg");
 }
   
 @media (min-width: 992px) {
@@ -121,28 +157,74 @@ h1 {
         padding: 2rem 1.5rem;
     }
     #mainNav .nav-link:hover {
-        color: #dbae59
+        color: $xolor
     }
     #mainNav.navbar-shrink {
-        background-color: rgb(24, 24, 24);
-    }
-    #mainNav.navbar-shrink .navbar-brand {
-        color: #dbae59;
+        background-color: $navfoot;
+        
     }
     #mainNav.navbar-shrink .nav-link {
         padding: 1.5rem 1.5rem 1.25rem;
         border-bottom: 0.25rem solid transparent;
     }
     #mainNav.navbar-shrink .nav-link:hover {
-        color: #dbae59;
+        color: $xolor;
     }
     #mainNav.navbar-shrink .nav-link.active {
         outline: none;
-        border-bottom: 0.25rem solid #dbae59;
+        border-bottom: 0.25rem solid $xolor;
     }
 }
 
-.music {
+.hrDivider {
+    margin: 58px 0;
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double $xolor;
+    color: $xolor;
     text-align: center;
-    background-color: rgb(18, 18, 18);
+}
+
+.hrDivider:after {
+    background-image: url("../../web/images/favicon-gold.ico");
+    background-size: 36px;
+    background-color: $body-bg;
+    display: inline-block;
+    width: 36px; 
+    height: 36px;
+    content:"";
+    position: relative;
+    top: -1.7em;
+    padding: 0 0.25em;
+}
+
+.allSections {
+    text-align: center;
+}
+
+.h1-sections{
+    font-size: 4.5em;
+    margin-bottom: 44px;
+}
+
+@media (max-width: 1200px) {
+    .h1-sections {
+        font-size: 3.5em;
+        margin-bottom: 48px;
+    }
+    .hrDivider {
+        margin: 62px 0;
+    }
+}
+
+.footer {
+    background-color: $navfoot;
+    color: $xolor;
+}
+
+.footer-icons {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+    @include linx($xolor, $xolor2);
 }
