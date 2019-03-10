@@ -3,8 +3,9 @@
     --body-xolor: gray;
     --nav-foot: #181818;
     --xolor: #dbae59;
-    --xolor-darker: #80693f;
-    --xolor-darker-darker: #403520;
+    --xolor-darker: #a48243;
+    --xolor-darker-darker: #80693f;
+    --xolor-popover: #242424;
     --logo-header: url("../images/logo-gold.png");
     --logo-header-vertical: url("../images/logo-gold-vertical.png");
     --logo-svg: url("../images/logo-gold.svg");
@@ -41,6 +42,7 @@
 
 body {
     @include linx(var(--xolor), var(--xolor-darker), var(--xolor-darker-darker));
+    transition: background-color 0.3s ease-in-out;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -50,15 +52,26 @@ body {
 $body-bg: var(--bg-xolor);
 $body-color: var(--body-xolor);
 $font-family-sans-serif: 'Open Sans';
-$popover-max-width: 405px;
-//$popover-bg: darken($body-color, 5);
 
-$container-max-widths: (
-  sm: 640px,
-  md: 1020px,
-  lg: 1160px,
-  xl: 1440px
-);
+body .popover {
+    background-color: var(--xolor-popover);
+}
+
+.popover .popover-header{
+    color: var(--xolor-popover);
+    background-color: var(--xolor-darker);
+    border: none;
+}
+
+.popover-body {
+    color: var(--body-xolor);
+    background-color: var(--xolor-popover);
+    border: 2px solid var(--xolor-darker);
+}
+
+.popover .arrow {
+    visibility: hidden;
+}
 
 h1, h2 {
     font-family: 'Cinzel';
@@ -119,7 +132,7 @@ h1, h2 {
     }
 }
 
-@media (max-width: 358px) {
+@media (max-width: 359px) {
     #mainNav .navbar-brand {
         width: 69%;
     }
@@ -139,7 +152,7 @@ h1, h2 {
     font-size: 80%;
     padding: 0.75rem;
     color: var(--xolor);
-    border: 1px solid var(--xolor);
+    border: 2px solid var(--xolor);
 }
 
 #mainNav .navbar-toggler:focus {
@@ -161,6 +174,7 @@ h1, h2 {
 
 .logoNav {
     content: var(--logo-svg);
+    display: inline-block;
 }
   
 @media (min-width: 992px) {
@@ -198,6 +212,9 @@ h1, h2 {
         outline: none;
         border-bottom: 0.25rem solid var(--xolor);
     }
+    #mainNav.navbar-toggler {
+        display: block;
+    }
 }
 
 .hrDivider {
@@ -221,6 +238,7 @@ h1, h2 {
     position: relative;
     top: -1.7em;
     padding: 0 0.25em;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .allSections {
@@ -299,4 +317,13 @@ h1, h2 {
     @include linx(var(--xolor), var(--xolor-darker), var(--xolor-darker-darker));
     font-size: 2.5em;
     margin: 0.5em 0;
+    border: 5px solid green;
+}
+
+@media (max-width: 576px) {
+    .footer-icons {
+        font-size: 1.5em;
+        margin: 0.25em 0;
+        padding: auto;
+    }
 }

@@ -18261,30 +18261,33 @@ $(function () {
 })
 
 function themeChanger() {
+  var lh = document.getElementById('logoHeader');
+  var ln = document.getElementById('logoNav');
   switch(check) {
     case false:
       var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
       link.type = 'image/x-icon';
       link.rel = 'shortcut icon';
-      link.href = '../../web/images/favicon-gold.ico';
+      link.href = '../images/favicon-gold.ico';
       document.getElementsByTagName('head')[0].appendChild(link);
       document.body.style.setProperty('--bg-xolor', "#0c0c0c");
       document.body.style.setProperty('--body-xolor', "gray");
       document.body.style.setProperty('--nav-foot', "#181818");
       document.body.style.setProperty('--xolor', "#dbae59");
-      document.body.style.setProperty('--xolor-darker', "#80693f");
-      document.body.style.setProperty('--xolor-darker-darker', "#403520");
-      document.body.style.setProperty('--logo-header', 'url("../../web/images/logo-gold.png")');
-      document.body.style.setProperty('--logo-header-vertical', 'url("../../web/images/logo-gold-vertical.png")');
-      document.body.style.setProperty('--logo-svg', 'url("../../web/images/logo-gold.svg")');
-      document.body.style.setProperty('--favixon', 'url("../../web/images/favicon-gold.ico")');
+      document.body.style.setProperty('--xolor-darker', "#a48243");
+      document.body.style.setProperty('--xolor-darker-darker', "#80693f");
+      document.body.style.setProperty('--xolor-popover', "#242424");
+      document.body.style.setProperty('--logo-header', 'url("../images/logo-gold.png")');
+      document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-gold-vertical.png")');
+      document.body.style.setProperty('--logo-svg', 'url("../images/logo-gold.svg")');
+      document.body.style.setProperty('--favixon', 'url("../images/favicon-gold.ico")');
       check = true;
       break;
     case true:
       var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
       link.type = 'image/x-icon';
       link.rel = 'shortcut icon';
-      link.href = '../../web/images/favicon-crimson.ico';
+      link.href = '../images/favicon-crimson.ico';
       document.getElementsByTagName('head')[0].appendChild(link);
       document.body.style.setProperty('--bg-xolor', "#e9e9e9");
       document.body.style.setProperty('--body-xolor', "#454545");
@@ -18292,10 +18295,11 @@ function themeChanger() {
       document.body.style.setProperty('--xolor', "#b22a2a");
       document.body.style.setProperty('--xolor-darker', "#851f1f");
       document.body.style.setProperty('--xolor-darker-darker', "#591515");
-      document.body.style.setProperty('--logo-header', 'url("../../web/images/logo-crimson.png")');
-      document.body.style.setProperty('--logo-header-vertical', 'url("../../web/images/logo-crimson-vertical.png")');
-      document.body.style.setProperty('--logo-svg', 'url("../../web/images/logo-crimson.svg")');
-      document.body.style.setProperty('--favixon', 'url("../../web/images/favicon-crimson.ico")');
+      document.body.style.setProperty('--xolor-popover', "#d1d1d1");
+      document.body.style.setProperty('--logo-header', 'url("../images/logo-crimson.png")');
+      document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-crimson-vertical.png")');
+      document.body.style.setProperty('--logo-svg', 'url("../images/logo-crimson.svg")');
+      document.body.style.setProperty('--favixon', 'url("../images/favicon-crimson.ico")');
       check = false;
       break;
   }

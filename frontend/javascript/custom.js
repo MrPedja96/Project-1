@@ -71,8 +71,9 @@ function themeChanger() {
       document.body.style.setProperty('--body-xolor', "gray");
       document.body.style.setProperty('--nav-foot', "#181818");
       document.body.style.setProperty('--xolor', "#dbae59");
-      document.body.style.setProperty('--xolor-darker', "#80693f");
-      document.body.style.setProperty('--xolor-darker-darker', "#403520");
+      document.body.style.setProperty('--xolor-darker', "#a48243");
+      document.body.style.setProperty('--xolor-darker-darker', "#80693f");
+      document.body.style.setProperty('--xolor-popover', "#242424");
       document.body.style.setProperty('--logo-header', 'url("../images/logo-gold.png")');
       document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-gold-vertical.png")');
       document.body.style.setProperty('--logo-svg', 'url("../images/logo-gold.svg")');
@@ -91,6 +92,7 @@ function themeChanger() {
       document.body.style.setProperty('--xolor', "#b22a2a");
       document.body.style.setProperty('--xolor-darker', "#851f1f");
       document.body.style.setProperty('--xolor-darker-darker', "#591515");
+      document.body.style.setProperty('--xolor-popover', "#d1d1d1");
       document.body.style.setProperty('--logo-header', 'url("../images/logo-crimson.png")');
       document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-crimson-vertical.png")');
       document.body.style.setProperty('--logo-svg', 'url("../images/logo-crimson.svg")');
