@@ -1,20 +1,15 @@
 :root {
-    --bg-xolor: #0c0c0c;
-    --body-xolor: gray;
-    --nav-foot: #181818;
+    --bg-xolor: #101010;
+    --body-xolor: #909090;
+    --nav-foot: #202020;
     --xolor: #dbae59;
     --xolor-darker: #a48243;
     --xolor-darker-darker: #80693f;
-    --xolor-popover: #242424;
+    --xolor-popover: #303030;
     --logo-header: url("../images/logo-gold.png");
     --logo-header-vertical: url("../images/logo-gold-vertical.png");
     --logo-svg: url("../images/logo-gold.svg");
     --favixon: url("../images/favicon-gold.ico");
-}
-
-* {
-    margin: 0;
-    padding: 0;
 }
 
 @mixin linx ($link, $hover, $darker) {
@@ -40,6 +35,15 @@
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     @include linx(var(--xolor), var(--xolor-darker), var(--xolor-darker-darker));
     transition: background-color 0.3s ease-in-out;
@@ -53,26 +57,6 @@ $body-bg: var(--bg-xolor);
 $body-color: var(--body-xolor);
 $font-family-sans-serif: 'Open Sans';
 
-body .popover {
-    background-color: var(--xolor-popover);
-}
-
-.popover .popover-header{
-    color: var(--xolor-popover);
-    background-color: var(--xolor-darker);
-    border: none;
-}
-
-.popover-body {
-    color: var(--body-xolor);
-    background-color: var(--xolor-popover);
-    border: 2px solid var(--xolor-darker);
-}
-
-.popover .arrow {
-    visibility: hidden;
-}
-
 h1, h2 {
     font-family: 'Cinzel';
     color: var(--xolor);
@@ -85,6 +69,139 @@ h1, h2 {
 
 .logoHeader {
     content: var(--logo-header);
+}
+
+#mainNav {
+    min-height: 56px;
+    background-color: var(--nav-foot);
+    @include linx(var(--body-xolor), var(--xolor), var(--xolor-darker));
+    z-index: 100000;
+}
+
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: var(--xolor);
+    border: 1px solid var(--xolor);
+}
+
+#mainNav .navbar-toggler:focus {
+    outline: none;
+}
+
+#mainNav .navbar-brand {
+    color: var(--xolor);
+    padding: .9rem 0;
+}
+
+#mainNav .navbar-collapse .nav-link:hover {
+    color: var(--xolor);
+}
+
+#mainNav .navbar-nav .nav-link.active {
+    color: var(--xolor);
+}
+
+.logoNav {
+    content: var(--logo-svg);
+    display: inline-block;
+}
+
+.hrDivider {
+    margin: 58px 0;
+    overflow: visible;
+    padding: 0;
+    border: none;
+    border-top: medium double var(--xolor);
+    color: var(--xolor);
+    text-align: center;
+}
+
+.hrDivider:after {
+    background-image: var(--favixon);
+    background-size: 36px;
+    background-color: var(--bg-xolor);
+    display: inline-block;
+    width: 36px; 
+    height: 36px;
+    content:"";
+    position: relative;
+    top: -1.7em;
+    padding: 0 0.25em;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.allSections {
+    text-align: center;
+}
+
+.h1-sections {
+    font-size: 4.5em;
+    margin-bottom: 44px;
+}
+
+.h2-sections {
+    font-size: 2.5em;
+}
+
+.slide {
+    height: 50vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+    height: 0;
+    margin: 1rem 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body .popover {
+    background-color: var(--xolor-darker);
+    max-width: 405px;
+    border: none;
+}
+
+.popover .popover-header{
+    color: var(--xolor-popover);
+    background-color: var(--xolor-darker);
+    border: none;
+}
+
+.popover-body {
+    color: var(--body-xolor);
+    background-color: var(--xolor-popover);
+}
+
+.popover .arrow {
+    visibility: hidden;
+}
+
+.footer {
+    background-color: var(--nav-foot);
+    color: var(--xolor);
+}
+
+.footer .col-2 {
+    padding: 0;
+}
+
+.footer-icons {
+    @include linx(var(--xolor), var(--xolor-darker), var(--xolor-darker-darker));
+    font-size: 2.5em;
+    margin: 0.25em 0;
 }
 
 @media (max-width: 576px) {
@@ -140,42 +257,6 @@ h1, h2 {
         width: 100%;
     }
 }
-
-#mainNav {
-    min-height: 56px;
-    background-color: var(--nav-foot);
-    @include linx(var(--body-xolor), var(--xolor), var(--xolor-darker));
-    z-index: 100000;
-}
-
-#mainNav .navbar-toggler {
-    font-size: 80%;
-    padding: 0.75rem;
-    color: var(--xolor);
-    border: 2px solid var(--xolor);
-}
-
-#mainNav .navbar-toggler:focus {
-    outline: none;
-}
-
-#mainNav .navbar-brand {
-    color: var(--xolor);
-    padding: .9rem 0;
-}
-
-#mainNav .navbar-collapse .nav-link:hover {
-    color: var(--xolor);
-}
-
-#mainNav .navbar-nav .nav-link.active {
-    color: var(--xolor);
-}
-
-.logoNav {
-    content: var(--logo-svg);
-    display: inline-block;
-}
   
 @media (min-width: 992px) {
     #mainNav {
@@ -217,51 +298,6 @@ h1, h2 {
     }
 }
 
-.hrDivider {
-    margin: 58px 0;
-    overflow: visible;
-    padding: 0;
-    border: none;
-    border-top: medium double var(--xolor);
-    color: var(--xolor);
-    text-align: center;
-}
-
-.hrDivider:after {
-    background-image: var(--favixon);
-    background-size: 36px;
-    background-color: var(--bg-xolor);
-    display: inline-block;
-    width: 36px; 
-    height: 36px;
-    content:"";
-    position: relative;
-    top: -1.7em;
-    padding: 0 0.25em;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.allSections {
-    text-align: center;
-}
-
-.h1-sections {
-    font-size: 4.5em;
-    margin-bottom: 44px;
-}
-
-.h2-sections {
-    font-size: 2.5em;
-}
-
-.slide {
-    height: 50vh;
-    width: 40vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 @media (max-width: 1200px) {
     .hrDivider {
         margin: 62px 0;
@@ -289,41 +325,5 @@ h1, h2 {
         height: auto;
         width: auto;
         margin: auto;
-    }
-}
-
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-    height: 0;
-    margin: 1rem 0;
-}
-
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.footer {
-    background-color: var(--nav-foot);
-    color: var(--xolor);
-}
-
-.footer-icons {
-    @include linx(var(--xolor), var(--xolor-darker), var(--xolor-darker-darker));
-    font-size: 2.5em;
-    margin: 0.5em 0;
-    border: 5px solid green;
-}
-
-@media (max-width: 576px) {
-    .footer-icons {
-        font-size: 1.5em;
-        margin: 0.25em 0;
-        padding: auto;
     }
 }
