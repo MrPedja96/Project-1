@@ -263,6 +263,9 @@ body .popover {
     .slide {
         height: 40vh;
     }
+    .carousel {
+        height: auto;
+    }
 }
 
 @media (min-width: 992px) {
@@ -315,6 +318,9 @@ body .popover {
     .slide {
         height: 45vh;
     }
+    .carousel {
+        height: auto;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -323,6 +329,10 @@ body .popover {
     }
     .slide {
         height: 50vh;
+    }
+    .carousel {
+        height: auto;
+        border: medium double var(--xolor);
     }
 }
 
