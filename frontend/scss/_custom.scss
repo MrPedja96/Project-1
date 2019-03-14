@@ -5,7 +5,7 @@
     --xolor: #dbae59;
     --xolor-darker: #a48243;
     --xolor-darker-darker: #80693f;
-    --xolor-popover: #303030;
+    --bg-xolor-secondary: #303030;
     --logo-header: url("../images/logo-gold.png");
     --logo-header-vertical: url("../images/logo-gold-vertical.png");
     --logo-svg: url("../images/logo-gold.svg");
@@ -56,10 +56,15 @@ body {
 $body-bg: var(--bg-xolor);
 $body-color: var(--body-xolor);
 $font-family-sans-serif: 'Open Sans';
+$card-color: var(--body-xolor);
+$card-bg: var(--bg-xolor-secondary);
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--xolor);
+}
 
 h1, h2 {
     font-family: 'Cinzel';
-    color: var(--xolor);
 }
 
 .mainHeader {
@@ -192,18 +197,23 @@ body .popover {
 }
 
 .popover .popover-header{
-    color: var(--xolor-popover);
+    color: var(--bg-xolor-secondary);
     background-color: var(--xolor-darker);
     border: none;
 }
 
 .popover-body {
     color: var(--body-xolor);
-    background-color: var(--xolor-popover);
+    background-color: var(--bg-xolor-secondary);
 }
 
 .popover .arrow {
     visibility: hidden;
+}
+
+.card {
+    margin: 2em auto 0;
+    border: none;
 }
 
 .footer {
@@ -254,6 +264,15 @@ body .popover {
     .h2-sections {
         font-size: 2em;
     }
+    .card {
+        width: auto;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 620px) {
+    .card {
+        width: 16rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -265,6 +284,9 @@ body .popover {
     }
     .carousel {
         height: auto;
+    }
+    .card {
+        width: 18rem;
     }
 }
 
@@ -321,6 +343,15 @@ body .popover {
     .carousel {
         height: auto;
     }
+    .card {
+        width: auto;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1025px) {
+    .card {
+        width: 16rem;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -333,6 +364,9 @@ body .popover {
     .carousel {
         height: auto;
         border: medium double var(--xolor);
+    }
+    .card {
+        width: 19rem;
     }
 }
 

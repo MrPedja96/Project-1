@@ -18201,8 +18201,6 @@ return Popper;
 
 }(jQuery));
 
-var check = Math.random() >= 0.5;
-
 /*function cookie() {
   var c = readCookie("check");
   if (c) {
@@ -18232,6 +18230,10 @@ function readCookie(name) {
   return null;
 }*/
 
+function reload() {
+  location.reload(true);
+}
+
 (function($) {
   "use strict";
 
@@ -18260,6 +18262,8 @@ $(function () {
   $('[data-toggle="popover"]').popover()
 })
 
+var check = Math.random() >= 0.5;
+
 function themeChanger() {
   var lh = document.getElementById('logoHeader');
   var ln = document.getElementById('logoNav');
@@ -18276,7 +18280,7 @@ function themeChanger() {
       document.body.style.setProperty('--xolor', "#dbae59");
       document.body.style.setProperty('--xolor-darker', "#a48243");
       document.body.style.setProperty('--xolor-darker-darker', "#80693f");
-      document.body.style.setProperty('--xolor-popover', "#303030");
+      document.body.style.setProperty('--bg-xolor-secondary', "#303030");
       document.body.style.setProperty('--logo-header', 'url("../images/logo-gold.png")');
       document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-gold-vertical.png")');
       document.body.style.setProperty('--logo-svg', 'url("../images/logo-gold.svg")');
@@ -18295,7 +18299,7 @@ function themeChanger() {
       document.body.style.setProperty('--xolor', "#b22a2a");
       document.body.style.setProperty('--xolor-darker', "#851f1f");
       document.body.style.setProperty('--xolor-darker-darker', "#591515");
-      document.body.style.setProperty('--xolor-popover', "#d0d0d0");
+      document.body.style.setProperty('--bg-xolor-secondary', "#d0d0d0");
       document.body.style.setProperty('--logo-header', 'url("../images/logo-crimson.png")');
       document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-crimson-vertical.png")');
       document.body.style.setProperty('--logo-svg', 'url("../images/logo-crimson.svg")');
