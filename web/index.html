@@ -16,33 +16,34 @@
   <!--<body onload="cookie()">-->
   <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#" style="font-family: 'Cinzel'">
+        <a class="navbar-brand js-scroll-trigger" href="#" style="font-family: 'Cinzel'" onclick="transparencyIO()">
           <img class="logoNav" alt="Frozen Moonlight">
         </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onclick="transparencyIO()">
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#music">Music</a>
+              <a class="nav-link js-scroll-trigger" href="#music" onclick="transparencyIO()">Music</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about" onclick="transparencyIO()">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a>
+              <a class="nav-link js-scroll-trigger" href="#gallery" onclick="transparencyIO()">Gallery</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#gigs">Gigs</a>
+              <a class="nav-link js-scroll-trigger" href="#gigs" onclick="transparencyIO()">Gigs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="#contact" onclick="transparencyIO()">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onclick="themeChanger()"><i class="fas fa-palette"></i></a>
+              <a class="nav-link js-scroll-trigger" onclick="themeChanger(); transparencyIO();"><i class="fas fa-palette"></i></a>
             </li>
           </ul>
         </div>
@@ -53,21 +54,17 @@
     <header class="mainHeader">
       <div class="container-fluid h-100">
         <div class="row h-100 justify-content-center">
-          <a class="col-12 col-sm-10 my-auto img-responsive wow fadeIn logoHeader" href="" onclick="reload()"></a>
+          <a class="col-2 col-sm-10 my-auto img-responsive wow fadeIn logoHeader" href="" onclick="reload()"></a>
         </div>  
       </div>
     </header>
 
     <!--Music-->
     <section class="allSections">
+      <hr class="hrDivider" id="music">
+      <h1 class="h1-sections">Music</h1>
+      <hr class="hrDivider">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <hr class="hrDivider" id="music">
-            <h1 class="h1-sections">Music</h1>
-            <hr class="hrDivider">
-          </div>
-        </div>
         <div class="row justify-content-around">
           <div class="col-12 col-sm-10">
             <div class="row justify-content-around">
@@ -338,14 +335,10 @@
 
     <!--About-->
     <section class="allSections">
+      <hr class="hrDivider" id="about">
+      <h1 class="h1-sections">About</h1>
+      <hr class="hrDivider">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <hr class="hrDivider" id="about">
-            <h1 class="h1-sections">About</h1>
-            <hr class="hrDivider">
-          </div>
-        </div>
         <div class="row justify-content-center">
           <div class="col-12 col-sm-11 col-md-10">
             <div class="row justify-content-center">
@@ -469,15 +462,9 @@
 
     <!--Gallery-->
     <section class="allSections">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <hr class="hrDivider" id="gallery">
-            <h1 class="h1-sections">Gallery</h1>
-            <hr class="hrDivider">
-          </div>
-        </div>
-      </div>
+      <hr class="hrDivider" id="gallery">
+      <h1 class="h1-sections">Gallery</h1>
+      <hr class="hrDivider">
       <div class="container-fluid">
         <div class="row justify-content-around">
           <div class="col-12 col-sm-10">
@@ -489,15 +476,9 @@
 
     <!--Gigs-->
     <section class="allSections">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <hr class="hrDivider" id="gigs">
-            <h1 class="h1-sections">Gigs</h1>
-            <hr class="hrDivider">
-          </div>
-        </div>
-      </div>
+      <hr class="hrDivider" id="gigs">
+      <h1 class="h1-sections">Gigs</h1>
+      <hr class="hrDivider">
       <div class="container-fluid">
         <div class="row justify-content-around">
           <div class="col-12 col-sm-10">
@@ -509,23 +490,17 @@
 
     <!--Contact-->
     <section class="allSections">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col">
-              <hr class="hrDivider" id="contact">
-              <h1 class="h1-sections">Contact</h1>
-              <hr class="hrDivider">
-            </div>
+      <hr class="hrDivider" id="contact">
+      <h1 class="h1-sections">Contact</h1>
+      <hr class="hrDivider">
+      <div class="container-fluid">
+        <div class="row justify-content-around">
+          <div class="col-12 col-sm-10">
+            
           </div>
         </div>
-        <div class="container-fluid">
-          <div class="row justify-content-around">
-            <div class="col-12 col-sm-10">
-              
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
     <!--Footer-->
     <footer class="footer text-center">

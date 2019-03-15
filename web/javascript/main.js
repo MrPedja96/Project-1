@@ -18258,6 +18258,44 @@ function reload() {
 
 })(jQuery);
 
+var bc = document.getElementById('mainNav');
+var nb = document.getElementsByClassName('navbar-brand')[0];
+var nt = document.getElementsByClassName('navbar-toggler')[0];
+var tIO = false;
+
+function bottomToTop(bTT) {
+  if (bTT.matches) {
+    document.getElementById('mainNav').className = "navbar navbar-expand-lg navbar-dark fixed-top";
+  } else {
+    document.getElementById('mainNav').className = "navbar navbar-expand-lg navbar-dark fixed-bottom";
+  }
+}
+
+var bTT = window.matchMedia("(min-width: 576px)");
+bottomToTop(bTT);
+bTT.addListener(bottomToTop);
+
+function transparencyIO() {
+  if (window.matchMedia("(max-width: 575.98px)").matches) {
+    switch(tIO) {
+      case false:
+        bc.style.backgroundColor = 'var(--nav-foot)';
+        bc.style.pointerEvents = 'all';
+        nb.style.display = 'block';
+        nt.style.display = 'none';
+        tIO = true;
+        break;
+      case true:
+        bc.style.backgroundColor = 'transparent';
+        bc.style.pointerEvents = 'none';
+        nb.style.display = 'none';
+        nt.style.display = 'block';
+        tIO = false;
+        break;
+    }
+  }
+}
+
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
@@ -18265,8 +18303,6 @@ $(function () {
 var check = Math.random() >= 0.5;
 
 function themeChanger() {
-  var lh = document.getElementById('logoHeader');
-  var ln = document.getElementById('logoNav');
   switch(check) {
     case false:
       var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
