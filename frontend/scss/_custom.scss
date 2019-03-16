@@ -186,7 +186,7 @@ h1, h2 {
     font-size: 1.5em;
 }
 
-.slide {
+.slides {
     height: auto;
     width: auto;
     margin: auto;
@@ -307,7 +307,7 @@ body .popover {
     .h1-sections {
         font-size: 3.5em;
     }
-    .slide {
+    .slides {
         height: 40vh;
     }
     .carousel {
@@ -362,7 +362,7 @@ body .popover {
     .h2-sections {
         font-size: 2.5em;
     }
-    .slide {
+    .slides {
         height: 45vh;
     }
     .carousel {
@@ -383,7 +383,7 @@ body .popover {
     .hrDivider {
         margin: 58px 0;
     }
-    .slide {
+    .slides {
         height: 50vh;
     }
     .carousel {
@@ -397,22 +397,12 @@ body .popover {
 
 //Heights
 
-@media (max-width: 576px) and (max-height: 359px) {
+@media (max-width: 575.98px) and (max-height: 359px) {
     .mainHeader .logoHeader {
         content: var(--logo-header);
     }
     .mainHeader .col-2 {
         flex: 0 0 83.33333%;
         max-width: 83.33333%;
-    }
-}
-
-@media (max-width: 576px) and (max-height: 576px) {
-    .slide {
-        height: 50vh;
-        width: 40vw;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
     }
 }
