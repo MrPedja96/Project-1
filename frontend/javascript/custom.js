@@ -108,7 +108,7 @@ function themeChanger() {
       link.href = '../images/favicon-gold.ico';
       document.getElementsByTagName('head')[0].appendChild(link);
       document.body.style.setProperty('--bg-xolor', "#101010");
-      document.body.style.setProperty('--body-xolor', "#909090");
+      document.body.style.setProperty('--body-xolor', "#a0a0a0");
       document.body.style.setProperty('--nav-foot', "#202020");
       document.body.style.setProperty('--xolor', "#dbae59");
       document.body.style.setProperty('--xolor-darker', "#a48243");
@@ -127,7 +127,7 @@ function themeChanger() {
       link.href = '../images/favicon-crimson.ico';
       document.getElementsByTagName('head')[0].appendChild(link);
       document.body.style.setProperty('--bg-xolor', "#f0f0f0");
-      document.body.style.setProperty('--body-xolor', "#707070");
+      document.body.style.setProperty('--body-xolor', "#606060");
       document.body.style.setProperty('--nav-foot', "#e0e0e0");
       document.body.style.setProperty('--xolor', "#b22a2a");
       document.body.style.setProperty('--xolor-darker', "#851f1f");

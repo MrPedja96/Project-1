@@ -1,6 +1,6 @@
 :root {
     --bg-xolor: #101010;
-    --body-xolor: #909090;
+    --body-xolor: #a0a0a0;
     --nav-foot: #202020;
     --xolor: #dbae59;
     --xolor-darker: #a48243;
@@ -106,6 +106,7 @@ h1, h2 {
     border: 2px solid var(--xolor);
     border-radius: 100%;
     background-color: var(--nav-foot);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
     margin: 0.47rem -0.05rem;
     visibility: hidden;
     opacity: 0;
@@ -179,11 +180,11 @@ h1, h2 {
 }
 
 .h1-sections {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 .h2-sections {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .slides {
@@ -232,9 +233,42 @@ body .popover {
     visibility: hidden;
 }
 
-.card {
-    margin: 2em auto 0;
+body .card {
+    margin: 1em auto;
     border: none;
+    border-radius: 0;
+}
+
+body .card-img-top {
+    border: 1px solid var(--bg-xolor-secondary);
+    border-radius: 0;
+}
+
+body .list-group {
+    margin: 0;
+}
+
+body .list-group-item-primary {
+    text-align: center;
+    background-color: var(--xolor);
+    color: var(--bg-xolor);
+}
+
+body .list-group-item-secondary {
+    text-align: center;
+    background-color: var(--bg-xolor-secondary);
+    color: var(--body-xolor);
+}
+
+.gigsTable table {
+    margin: auto;
+}
+
+.gigsTable th, td {
+    width: 26vw;
+    height: 48px;
+    font-size: .75rem;
+    padding: 0;
 }
 
 .footer {
@@ -276,24 +310,30 @@ body .popover {
         top: auto;
         font-size: 80%;
         background-color: transparent;
+        box-shadow: none;
         padding: 0.75rem;
         border: 1px solid var(--xolor);
         border-radius: 5px;
         visibility: visible;
         opacity: 1;
     }
+    .h1-sections {
+        font-size: 3.5em;
+    }
+    .h2-sections {
+        font-size: 2.5em;
+    }
     .hrDivider {
         margin: 66px 0;
         border-top: medium double var(--xolor);
     }
-    .h1-sections {
-        font-size: 3em;
-    }
-    .h2-sections {
-        font-size: 2em;
-    }
     .card {
         width: auto;
+    }
+    .gigsTable th, td {
+        width: 23vw;
+        height: 48px;
+        font-size: 1rem;
     }
 }
 
@@ -305,7 +345,10 @@ body .popover {
 
 @media (min-width: 768px) {
     .h1-sections {
-        font-size: 3.5em;
+        font-size: 4em;
+    }
+    .h2-sections {
+        font-size: 2.5em;
     }
     .slides {
         height: 40vh;
@@ -315,6 +358,9 @@ body .popover {
     }
     .card {
         width: 18rem;
+    }
+    .gigsTable th, td {
+        width: 22vw;
     }
 }
 
@@ -358,9 +404,6 @@ body .popover {
     }
     .h1-sections {
         font-size: 4.5em;
-    }
-    .h2-sections {
-        font-size: 2.5em;
     }
     .slides {
         height: 45vh;
