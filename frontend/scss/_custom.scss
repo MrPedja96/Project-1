@@ -146,6 +146,10 @@ h1, h2 {
     color: var(--xolor);
 }
 
+#mainNav .nav-link {
+    width: 60px;
+}
+
 .logoNav {
     content: var(--logo-svg);
     display: inline-block;
@@ -298,15 +302,8 @@ body .list-group-item-secondary {
         content: var(--logo-header);
         height: auto;
     }
-    #mainNav {
-        background-color: var(--nav-foot);
-    }
-    #mainNav .navbar-brand {
-        display: block;
-        width: auto;
-    }
     #mainNav .navbar-toggler {
-        position: static;
+        /*position: static;
         top: auto;
         font-size: 80%;
         background-color: transparent;
@@ -315,17 +312,19 @@ body .list-group-item-secondary {
         border: 1px solid var(--xolor);
         border-radius: 5px;
         visibility: visible;
-        opacity: 1;
+        opacity: 1;*/
+        position: absolute;
+        top: 8px;
+        right: 16px;
     }
     .h1-sections {
         font-size: 3.5em;
     }
-    .h2-sections {
+    #about .h2-sections {
         font-size: 2.5em;
     }
     .hrDivider {
-        margin: 66px 0;
-        border-top: medium double var(--xolor);
+        margin: 40px 0;
     }
     .card {
         width: auto;
@@ -346,9 +345,6 @@ body .list-group-item-secondary {
 @media (min-width: 768px) {
     .h1-sections {
         font-size: 4em;
-    }
-    .h2-sections {
-        font-size: 2.5em;
     }
     .slides {
         height: 40vh;
@@ -374,10 +370,13 @@ body .list-group-item-secondary {
     }
     #mainNav .navbar-brand {
         padding: .5rem 0;
+        display: block;
+        width: auto;
     }
     #mainNav .nav-link {
         transition: none;
         padding: 2rem 1.5rem;
+        width: auto;
     }
     #mainNav .nav-link:hover {
         color: var(--xolor);
@@ -416,7 +415,7 @@ body .list-group-item-secondary {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1025px) {
+@media (min-width: 992px) and (max-width: 1035px) {
     .card {
         width: 16rem;
     }
@@ -431,8 +430,25 @@ body .list-group-item-secondary {
     }
     .carousel {
         height: auto;
-        border: medium double var(--xolor);
     }
+    .card {
+        width: 15rem;
+    }
+    .card h5 {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1270px) {
+    .card {
+        width: 16rem;
+    }
+    .card h5 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1440px) {
     .card {
         width: 19rem;
     }
