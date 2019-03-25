@@ -1,0 +1,71 @@
+#main-nav {
+    min-height: 56px;
+    background-color: transparent;
+    @include linx(var(--body-xolor), var(--xolor), var(--xolor-darker));
+    z-index: 100000;
+    transition: background-color 0.25s ease-in-out;
+    pointer-events: none;
+}
+
+#main-nav .navbar-toggler {
+    padding: 1rem;
+    color: var(--xolor);
+    border: 2px solid var(--xolor);
+    border-radius: 100%;
+    background-color: var(--nav-foot);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+    margin: 0.47rem -0.05rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: background-color 0.25s ease-in-out, visibility 0s, opacity 0.5s ease-in-out;
+    pointer-events: all;
+}
+
+#main-nav .navbar-toggler:focus {
+    outline: none;
+}
+
+#main-nav.navbar-shrink .navbar-toggler {
+    visibility: visible;
+    opacity: 1;
+}
+
+#main-nav .navbar-brand {
+    color: var(--xolor);
+    padding: .9rem 0;
+    display: none;
+    pointer-events: all;
+}
+
+#main-nav .navbar-brand img {
+    width: 100%;
+}
+
+#main-nav .navbar-collapse {
+    pointer-events: all;
+}
+
+#main-nav .navbar-collapse .nav-link:hover {
+    color: var(--xolor);
+}
+
+#main-nav .navbar-nav .nav-link.active {
+    color: var(--xolor);
+}
+
+#main-nav .nav-link {
+    width: 60px;
+}
+
+.logoNav {
+    content: var(--logo-svg);
+    display: inline-block;
+}
+
+.theme:nth-child(1) {
+    display: none;
+}
+
+.theme:nth-child(2) {
+    display: block;
+}

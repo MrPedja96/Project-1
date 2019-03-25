@@ -10,20 +10,20 @@ function reload() {
   });
 
   $('body').scrollspy({
-    target: '#mainNav',
+    target: '#main-nav',
     offset: 100
   });
 
   var navbarCollapse = function() {
     if (window.matchMedia("(min-width: 992px)").matches) {
-      if ($("#mainNav").offset().top > 100) {
-        $("#mainNav").addClass("navbar-shrink");
+      if ($("#main-nav").offset().top > 100) {
+        $("#main-nav").addClass("navbar-shrink");
       } else {
-        $("#mainNav").removeClass("navbar-shrink");
+        $("#main-nav").removeClass("navbar-shrink");
       }
     } else {
-      if ($("#mainNav").offset().top > 100) {
-        $("#mainNav").addClass("navbar-shrink");
+      if ($("#main-nav").offset().top > 100) {
+        $("#main-nav").addClass("navbar-shrink");
       }
     }
   };
@@ -32,7 +32,7 @@ function reload() {
 
 })(jQuery);
 
-var bc = document.getElementById('mainNav');
+var bc = document.getElementById('main-nav');
 var nb = document.getElementsByClassName('navbar-brand')[0];
 var nt = document.getElementsByClassName('navbar-toggler')[0];
 var nl = document.getElementsByClassName("nav-link");
@@ -50,7 +50,7 @@ var bTT = window.matchMedia("(min-width: 576px)");
 bottomToTop(bTT);
 bTT.addListener(bottomToTop);
 
-function responsiveCheck(bTT) {
+function responsiveCheck(rC) {
   if (rC.matches) {
     bc.style.backgroundColor = 'transparent';
     bc.style.pointerEvents = 'all';
@@ -119,7 +119,7 @@ function themeChanger() {
       document.body.style.setProperty('--xolor', "#dbae59");
       document.body.style.setProperty('--xolor-darker', "#a48243");
       document.body.style.setProperty('--xolor-darker-darker', "#80693f");
-      document.body.style.setProperty('--bg-xolor-secondary', "#303030");
+      document.body.style.setProperty('--bg-xolor-secondary', "#282828");
       document.body.style.setProperty('--logo-header', 'url("../images/logo-gold.png")');
       document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-gold-vertical.png")');
       document.body.style.setProperty('--logo-svg', 'url("../images/logo-gold.svg")');
@@ -137,7 +137,7 @@ function themeChanger() {
       document.body.style.setProperty('--xolor', "#b22a2a");
       document.body.style.setProperty('--xolor-darker', "#851f1f");
       document.body.style.setProperty('--xolor-darker-darker', "#591515");
-      document.body.style.setProperty('--bg-xolor-secondary', "#d0d0d0");
+      document.body.style.setProperty('--bg-xolor-secondary', "#dcdcdc");
       document.body.style.setProperty('--logo-header', 'url("../images/logo-crimson.png")');
       document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-crimson-vertical.png")');
       document.body.style.setProperty('--logo-svg', 'url("../images/logo-crimson.svg")');

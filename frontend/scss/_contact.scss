@@ -1,0 +1,24 @@
+form textarea {
+    resize: none;
+    color: var(--body-xolor);
+}
+
+body .btn:focus, .btn:active {
+    outline: none;
+    box-shadow: none;
+}
+
+body .btn-default {
+    background-color: var(--xolor);
+    color: var(--nav-foot);
+    border-color: var(--xolor-darker);
+    border: none;
+    border-radius: 0;
+}
+
+body .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: var(--xolor-darker);
+    color: var(--nav-foot);
+    border-color: var(--xolor-darker-darker);
+    border-radius: 0;
+}
