@@ -15,9 +15,9 @@
 
   <body>
     <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" id="mainNav" onblur="transparencyIO()">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#" style="font-family: 'Cinzel'" onclick="transparencyIO()">
+        <a class="navbar-brand js-scroll-trigger" href="#" onclick="transparencyIO()">
           <img class="logoNav" alt="Frozen Moonlight">
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -39,11 +39,11 @@
               <a class="nav-link js-scroll-trigger" href="#contact" onclick="transparencyIO()">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onclick="themeChanger(); transparencyIO();"><i class="fas fa-palette"></i></a>
+              <a class="nav-link js-scroll-trigger" onclick="themeChanger(); transparencyIO();"><div class="theme"><i class="fas fa-palette"></i></div><div class="theme">Theme</div></a>
             </li>
-            <!--<li class="nav-item">
-              <a class="nav-link js-scroll-trigger xNav" onclick="transparencyIO()"><i class="fas fa-times-circle"></i></a>
-            </li>-->
+            <li class="nav-item xNav">
+              <a class="nav-link js-scroll-trigger" onclick="transparencyIO()"><i class="fas fa-times"></i></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -360,11 +360,28 @@
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="container">
+              <div class="col-12 col-lg-10">
                 <h2 class="h2-sections"><br>History</h2>
                 <article>
-                  <p>
-                    To be... inserted...
+                  <p class="history">
+                    Frozen Moonlight is a melodic death metal/metalcore band from Novi Sad, Serbia formed by vocalist/bassist Mladen Nikolić and
+                    guitarist Branko Andrej Živković in 2013. Their first line up also included Predrag Andrejević on guitar and Boris Ždero on
+                    drums.
+                    In 2014 they released their debut EP Dat Victoria Vires as well as introducing a new bassist to the band, Igor Korom, which
+                    allowed Mladen to hone his vocal and compositional skills. That year they also win the best Serbian metal release of the year
+                    award from Global Metal Apocalypse, which put them on the list with the likes of Deathstars, Motionless in White, Behemoth etc.
+                    In 2015 Predrag, Boris and Igor left the band due to personal and academic reasons. Nikola Juhas became their new bassist,
+                    Vanja Andrić (Hollow My Eyes, Aheront, Reforma) filling in on either guitar or bass (as well as back or second vocals, lyrics
+                    writer and composer) and their new drummer was Antonio Maletin (Rain Delay). The band released two singles during 2016 and
+                    2017: “Kintsukuroi” and “Cinder”.
+                    Predrag would soon after rejoin the band replacing Vanja on guitars.
+                    During 2018 the band focused on live performances, playing a multitude of venues in and outside of Vojvodina.
+                    The bands structure changes yet again, Antonio leaving because of health complications and Nikola Juhas was kicked out as
+                    the result of various conflicts, after being part of Frozen Moonlight for 2 years as a live member. In his place comes
+                    Rodoljub Raičković (producer from Vortex Studios in Inđija) and Boris Ždero returns as more of a session member. 
+                    At the start of 2019 the band introduces a third guitarist, Igor Bubulj and Vanja focuses more on the visual identity of
+                    the band as well as writing lyrics.
+                    They announce their new EP “Afterglow” to be published in 2019.
                   </p>
                 </article>
               </div>
@@ -431,7 +448,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Vanja Andrić</h5>
                     <p class="card-text">
-                      Vocals, guitars
+                      Vocals, designs
                       <br>
                       2015-present
                     </p>
@@ -444,7 +461,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Rodoljub Raičković</h5>
                     <p class="card-text">
-                      Bass
+                      Bass, producing
                       <br>
                       2018-present
                     </p>
@@ -469,20 +486,6 @@
         </div>
       </div>
     </section>
-
-    <!--Gallery
-    <section class="allSections">
-      <hr class="hrDivider" id="gallery">
-      <h1 class="h1-sections">Gallery</h1>
-      <hr class="hrDivider">
-      <div class="container-fluid">
-        <div class="row justify-content-around">
-          <div class="col-12 col-sm-10">
-            
-          </div>
-        </div>
-      </div>
-    </section>-->
 
     <!--Gigs-->
     <section class="allSections">

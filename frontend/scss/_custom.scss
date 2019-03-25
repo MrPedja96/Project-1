@@ -46,7 +46,7 @@ html {
 
 body {
     @include linx(var(--xolor), var(--xolor-darker), var(--xolor-darker-darker));
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -96,7 +96,7 @@ h1, h2 {
     background-color: transparent;
     @include linx(var(--body-xolor), var(--xolor), var(--xolor-darker));
     z-index: 100000;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
     pointer-events: none;
 }
 
@@ -110,7 +110,7 @@ h1, h2 {
     margin: 0.47rem -0.05rem;
     visibility: hidden;
     opacity: 0;
-    transition: background-color 0.3s ease-in-out, visibility 0s, opacity 0.5s ease-in-out;
+    transition: background-color 0.25s ease-in-out, visibility 0s, opacity 0.5s ease-in-out;
     pointer-events: all;
 }
 
@@ -155,6 +155,14 @@ h1, h2 {
     display: inline-block;
 }
 
+.theme:nth-child(1) {
+    display: none;
+}
+
+.theme:nth-child(2) {
+    display: block;
+}
+
 .hrDivider {
     margin: 30px 0;
     overflow: visible;
@@ -176,7 +184,7 @@ h1, h2 {
     position: relative;
     top: -1.7em;
     padding: 0 0.25em;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
 }
 
 .allSections {
@@ -303,16 +311,6 @@ body .list-group-item-secondary {
         height: auto;
     }
     #mainNav .navbar-toggler {
-        /*position: static;
-        top: auto;
-        font-size: 80%;
-        background-color: transparent;
-        box-shadow: none;
-        padding: 0.75rem;
-        border: 1px solid var(--xolor);
-        border-radius: 5px;
-        visibility: visible;
-        opacity: 1;*/
         position: absolute;
         top: 8px;
         right: 16px;
@@ -325,6 +323,9 @@ body .list-group-item-secondary {
     }
     .hrDivider {
         margin: 40px 0;
+    }
+    .history {
+        text-align: justify;
     }
     .card {
         width: auto;
@@ -366,7 +367,7 @@ body .list-group-item-secondary {
         padding-bottom: 0;
         border-bottom: none;
         background-color: transparent;
-        transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.25s ease-in-out;
     }
     #mainNav .navbar-brand {
         padding: .5rem 0;
@@ -382,7 +383,7 @@ body .list-group-item-secondary {
         color: var(--xolor);
     }
     #mainNav.navbar-shrink {
-        background-color: var(--nav-foot);
+        background-color: var(--nav-foot) !important;
     }
     #mainNav.navbar-shrink .nav-link {
         padding: 1.5rem 1.5rem 1.25rem;
@@ -396,7 +397,16 @@ body .list-group-item-secondary {
         border-bottom: 0.25rem solid var(--xolor);
     }
     #mainNav .navbar-toggler {
-        display: none !important;
+        display: none;
+    }
+    .theme:nth-child(1) {
+        display: block;
+    }
+    .theme:nth-child(2) {
+        display: none;
+    }
+    .xNav {
+        display: none;
     }
     .hrDivider {
         margin: 66px 0;

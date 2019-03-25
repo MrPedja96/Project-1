@@ -35,6 +35,7 @@ function reload() {
 var bc = document.getElementById('mainNav');
 var nb = document.getElementsByClassName('navbar-brand')[0];
 var nt = document.getElementsByClassName('navbar-toggler')[0];
+var nl = document.getElementsByClassName("nav-link");
 var tIO = false;
 
 function bottomToTop(bTT) {
@@ -49,6 +50,26 @@ var bTT = window.matchMedia("(min-width: 576px)");
 bottomToTop(bTT);
 bTT.addListener(bottomToTop);
 
+function responsiveCheck(bTT) {
+  if (rC.matches) {
+    bc.style.backgroundColor = 'transparent';
+    bc.style.pointerEvents = 'all';
+    nb.style.display = 'block';
+    for (var i = 0; i < nl.length; i++) {
+      nl[i].style.visibility = 'visible';
+      nl[i].style.opacity = '1';
+    }
+    nt.style.display = 'none';
+  } else {
+    tIO = true;
+    transparencyIO();
+  }
+}
+
+var rC = window.matchMedia("(min-width: 992px)");
+responsiveCheck(rC);
+rC.addListener(responsiveCheck);
+
 function transparencyIO() {
   if (window.matchMedia("(max-width: 991.98px)").matches) {
     switch(tIO) {
@@ -56,6 +77,10 @@ function transparencyIO() {
         bc.style.backgroundColor = 'var(--nav-foot)';
         bc.style.pointerEvents = 'all';
         nb.style.display = 'block';
+        for (var i = 0; i < nl.length; i++) {
+          nl[i].style.visibility = 'visible';
+          nl[i].style.opacity = '1';
+        }
         nt.style.display = 'none';
         tIO = true;
         break;
@@ -63,6 +88,10 @@ function transparencyIO() {
         bc.style.backgroundColor = 'transparent';
         bc.style.pointerEvents = 'none';
         nb.style.display = 'none';
+        for (var i = 0; i < nl.length; i++) {
+          nl[i].style.visibility = 'hidden';
+          nl[i].style.opacity = '0';
+        }
         nt.style.display = 'block';
         tIO = false;
         break;
