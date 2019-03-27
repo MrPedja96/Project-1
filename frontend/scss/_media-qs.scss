@@ -46,9 +46,6 @@
     .h1-sections {
         font-size: 4em;
     }
-    .slides {
-        height: 40vh;
-    }
     .carousel {
         height: auto;
         border: medium double var(--xolor);
@@ -114,9 +111,6 @@
     .h1-sections {
         font-size: 4.5em;
     }
-    .slides {
-        height: 45vh;
-    }
     .carousel {
         height: auto;
     }
@@ -137,9 +131,6 @@
 @include media-breakpoint-up(xl) {
     .hr-divider {
         margin: 58px 0;
-    }
-    .slides {
-        height: 50vh;
     }
     .carousel {
         height: auto;

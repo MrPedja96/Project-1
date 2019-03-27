@@ -11,7 +11,7 @@ function reload() {
 
   $('body').scrollspy({
     target: '#main-nav',
-    offset: 100
+    offset: 100,
   });
 
   var navbarCollapse = function() {

@@ -69,7 +69,6 @@ gulp.task('javascript', function () {
     './node_modules/jquery/dist/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
     './node_modules/bootstrap/dist/js/bootstrap.js',
-    './node_modules/bootstrap-cookie-alert/cookiealert-standalone.js',
     './node_modules/featherlight/src/featherlight.js',
     './node_modules/featherlight/src/featherlight.gallery.js',
     './javascript/custom.js'
@@ -94,7 +93,7 @@ gulp.task('static', function() {
       baseDir: "../web/"
     }
   });
-  gulp.watch("./scss/**/*.scss", ['sass']);
+  gulp.watch("./scss/**/*.scss", gulp.series('sass'));
   gulp.watch("../web/**/*.{html,css,js}").on('change', browserSync.reload);
 });
 
@@ -105,7 +104,7 @@ gulp.task('php', function() {
   php.server({ base: '../web/', port: 8010, keepalive: true});
 });
 
-gulp.task('dynamic', ['php'], function() {
+gulp.task('dynamic', gulp.series('php', function() {
   browserSync.init({
     proxy: '127.0.0.1:8010',
     port: 4000,
@@ -116,14 +115,14 @@ gulp.task('dynamic', ['php'], function() {
   });
   gulp.watch("./scss/**/*.scss", ['sass']);
   gulp.watch("../web/**/*.{php,html,css,js}").on('change', browserSync.reload);
-});
+}));
 
 // Rerun the task When a file changes
 gulp.task ( 'watch', function () {
-  gulp.watch( './js/**/*.js', [ 'javascript' ]);
-  gulp.watch( 'images/**', [ 'images' ]);
-  gulp.watch("./scss/**/*.scss", ['sass']);
+  gulp.watch( './javascript/**/*.js', gulp.series('javascript'));
+  gulp.watch( 'images/**', gulp.series('images'));
+  gulp.watch("./scss/**/*.scss", gulp.series('sass'));
 });
 
 // Default task that includes fonts and other tasks in single run
-gulp.task('default', ['sass', 'javascript', 'font-copy', 'images']);
+gulp.task('default', gulp.series(gulp.parallel('sass', 'javascript', 'font-copy', 'images')));

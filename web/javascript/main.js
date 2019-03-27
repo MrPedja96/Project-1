@@ -18214,7 +18214,7 @@ function reload() {
 
   $('body').scrollspy({
     target: '#main-nav',
-    offset: 100
+    offset: 100,
   });
 
   var navbarCollapse = function() {
@@ -18340,7 +18340,7 @@ function themeChanger() {
       document.body.style.setProperty('--xolor', "#b22a2a");
       document.body.style.setProperty('--xolor-darker', "#851f1f");
       document.body.style.setProperty('--xolor-darker-darker', "#591515");
-      document.body.style.setProperty('--bg-xolor-secondary', "#d8d8d8");
+      document.body.style.setProperty('--bg-xolor-secondary', "#dcdcdc");
       document.body.style.setProperty('--logo-header', 'url("../images/logo-crimson.png")');
       document.body.style.setProperty('--logo-header-vertical', 'url("../images/logo-crimson-vertical.png")');
       document.body.style.setProperty('--logo-svg', 'url("../images/logo-crimson.svg")');
