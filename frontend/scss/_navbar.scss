@@ -57,9 +57,9 @@
     width: 60px;
 }
 
-.logoNav {
+.logo-nav::before {
     content: var(--logo-svg);
-    display: inline-block;
+    display: block;
 }
 
 .theme:nth-child(1) {

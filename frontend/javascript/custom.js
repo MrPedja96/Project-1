@@ -36,6 +36,9 @@ var bc = document.getElementById('main-nav');
 var nb = document.getElementsByClassName('navbar-brand')[0];
 var nt = document.getElementsByClassName('navbar-toggler')[0];
 var nl = document.getElementsByClassName("nav-link");
+var caA = document.getElementsByClassName("card");
+var sIL = document.getElementsByClassName("order-md-1");
+var sIR = document.getElementsByClassName("order-md-2");
 var tIO = false;
 
 function bottomToTop(bTT) {
@@ -49,6 +52,35 @@ function bottomToTop(bTT) {
 var bTT = window.matchMedia("(min-width: 576px)");
 bottomToTop(bTT);
 bTT.addListener(bottomToTop);
+
+function animateAdd(aA) {
+  if (aA.matches) {
+    for(i = 0; i < sIL.length; i++) {
+      sIL[i].classList.add("slideInLeft");
+    }
+    for(i = 0; i < sIR.length; i++) {
+      sIR[i].classList.add("slideInRight");
+    }
+    for(i = 0; i < caA.length; i++) {
+      caA[i].classList.add("fadeInUp");
+    }
+  } else {
+    
+    for(i = 0; i < sIL.length; i++) {
+      sIL[i].classList.remove("slideInLeft");
+    }
+    for(i = 0; i < sIR.length; i++) {
+      sIR[i].classList.remove("slideInRight");
+    }
+    for(i = 0; i < caA.length; i++) {
+      caA[i].classList.remove("fadeInUp");
+    }
+  }
+}
+
+var aA = window.matchMedia("(min-width: 768px)");
+animateAdd(aA);
+aA.addListener(animateAdd);
 
 function responsiveCheck(rC) {
   if (rC.matches) {
@@ -102,6 +134,153 @@ function transparencyIO() {
 $(function () {
   $('[data-toggle="popover"]').popover();
 });
+
+/*var gigs = [
+  {
+      "year": "2013",
+      "date": "23.11",
+      "venue": "CK13",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2014",
+      "date": "14.03",
+      "venue": "Quarter",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2014",
+      "date": "17.04",
+      "venue": "Route 66",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2014",
+      "date": "28.06",
+      "venue": "Bumerang",
+      "city": "Belgrade"
+  },
+  {
+      "year": "2014",
+      "date": "20.09",
+      "venue": "CK13",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2014",
+      "date": "01.11",
+      "venue": "Quarter",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2014",
+      "date": "19.12",
+      "venue": "Route 66",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2015",
+      "date": "28.02",
+      "venue": "Quarter",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2015",
+      "date": "29.05",
+      "venue": "Quarter",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2015",
+      "date": "07.11",
+      "venue": "Quarter",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2016",
+      "date": "14.10",
+      "venue": "Quarter",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2017",
+      "date": "10.11",
+      "venue": "SKCNS Fabrika",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2017",
+      "date": "21.11",
+      "venue": "Dvorište",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2017",
+      "date": "16.12",
+      "venue": "CK13",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2018",
+      "date": "26.01",
+      "venue": "Underground Disco",
+      "city": "Beočin"
+  },
+  {
+      "year": "2018",
+      "date": "02.03",
+      "venue": "Buka pod Rumom",
+      "city": "Ruma"
+  },
+  {
+      "year": "2018",
+      "date": "28.04",
+      "venue": "Zombi",
+      "city": "Bečej"
+  },
+  {
+      "year": "2018",
+      "date": "04.05",
+      "venue": "CK13",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2018",
+      "date": "06.05",
+      "venue": "Dom Omladine",
+      "city": "Belgrade"
+  },
+  {
+      "year": "2018",
+      "date": "28.07",
+      "venue": "Fest",
+      "city": "Zemun"
+  },
+  {
+      "year": "2018",
+      "date": "31.07",
+      "venue": "Perla",
+      "city": "Bački Petrovac"
+  },
+  {
+      "year": "2018",
+      "date": "18.08",
+      "venue": "Dvorište",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2018",
+      "date": "21.10",
+      "venue": "SKCNS Fabrika",
+      "city": "Novi Sad"
+  },
+  {
+      "year": "2019",
+      "date": "23.02",
+      "venue": "CK13",
+      "city": "Novi Sad"
+  },
+];*/
 
 var check = Math.random() >= 0.5;
 
