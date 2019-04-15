@@ -18205,6 +18205,16 @@ function reload() {
   location.reload(true);
 }
 
+var lh = document.getElementById('logo-header');
+
+if (navigator.userAgent.indexOf('Edge') >= 0){
+  if (bTT.matches) {
+    bc.className = "navbar navbar-expand-lg navbar-dark fixed-top";
+  }
+} else {
+  
+}
+
 (function($) {
   "use strict";
 

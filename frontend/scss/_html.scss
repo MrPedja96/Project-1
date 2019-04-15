@@ -4,13 +4,13 @@
     outline: none;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     @include linx(var(--xolor), var(--xolor-darker), var(--xolor-darker-darker));
     transition: background-color 0.25s ease-in-out;
+}
+
+a {
+    transition: color 0.25s ease-in-out;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -42,7 +42,7 @@ h1, h2 {
     display: inline-block;
     width: 36px; 
     height: 36px;
-    content:"";
+    content: "";
     position: relative;
     top: -1.7em;
     padding: 0 0.25em;

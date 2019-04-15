@@ -17,7 +17,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-nav" onblur="transparencyIO()">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#" onclick="transparencyIO()">
+        <a class="navbar-brand js-scroll-trigger" data-scroll href="#" onclick="transparencyIO()">
           <div class="logo-nav"></div>
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -27,16 +27,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#music" onclick="transparencyIO()">Music</a>
+              <a class="nav-link js-scroll-trigger" data-scroll href="#music" onclick="transparencyIO()">Music</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about" onclick="transparencyIO()">About</a>
+              <a class="nav-link js-scroll-trigger" data-scroll href="#about" onclick="transparencyIO()">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#gigs" onclick="transparencyIO()">Gigs</a>
+              <a class="nav-link js-scroll-trigger" data-scroll href="#gigs" onclick="transparencyIO()">Gigs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact" onclick="transparencyIO()">Contact</a>
+              <a class="nav-link js-scroll-trigger" data-scroll href="#contact" onclick="transparencyIO()">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" onclick="themeChanger(); transparencyIO();"><div class="theme"><i class="fas fa-palette"></i></div><div class="theme">Theme</div></a>
@@ -54,7 +54,7 @@
       <div class="container-fluid h-100">
         <div class="row h-100 justify-content-center">
           <a class="col-2 col-sm-10 my-auto img-responsive wow fadeIn logo-header" href="" onclick="reload()"></a>
-        </div>  
+        </div>
       </div>
     </header>
 
@@ -337,7 +337,7 @@
       <hr class="hr-divider" id="about">
       <h1 class="h1-sections">About</h1>
       <hr class="hr-divider">
-      <div class="container-fluid" id="about">
+      <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-12 col-sm-11 col-md-10">
             <div class="row justify-content-center">
@@ -496,7 +496,7 @@
         <div class="row justify-content-center">
           <div class="col-12 col-sm-10 col-md-9 text-justify gigs-table">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item list-group-item-primary">2013</li>
+              <!--<li class="list-group-item list-group-item-primary">2013</li>
               <li class="list-group-item list-group-item-secondary">
                 <table>
                   <tr>
@@ -718,6 +718,229 @@
                     <td>Novi Sad</td>
                   </tr>
                 </table>
+              </li>-->
+              <li class="list-group-item list-group-item-primary">2019</li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>23.02</th>
+                    <td>CK13</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-primary">2018</li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>21.10</th>
+                    <td>SKCNS Fabrika</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>18.08</th>
+                    <td>Dvorište</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>31.07</th>
+                    <td>Perla</td>
+                    <td>Bački Petrovac</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>28.07</th>
+                    <td>Fest</td>
+                    <td>Zemun</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>06.05</th>
+                    <td>Dom Omladine</td>
+                    <td>Belgrade</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>04.05</th>
+                    <td>CK13</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>28.04</th>
+                    <td>Zombi</td>
+                    <td>Bečej</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>02.03</th>
+                    <td>Buka pod Rumom</td>
+                    <td>Ruma</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>26.01</th>
+                    <td>Underground Disco</td>
+                    <td>Beočin</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-primary">2017</li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>16.12</th>
+                    <td>CK13</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>21.11</th>
+                    <td>Dvorište</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>10.11</th>
+                    <td>SKCNS Fabrika</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-primary">2016</li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>14.10</th>
+                    <td>Quarter</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-primary">2015</li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>07.11</th>
+                    <td>Quarter</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>29.05</th>
+                    <td>Quarter</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>28.02</th>
+                    <td>Quarter</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-primary">2014</li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>19.12</th>
+                    <td>Route 66</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>01.11</th>
+                    <td>Quarter</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>20.09</th>
+                    <td>CK13</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>28.06</th>
+                    <td>Bumerang</td>
+                    <td>Belgrade</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>17.04</th>
+                    <td>Route 66</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>14.03</th>
+                    <td>Quarter</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
+              </li>
+              <li class="list-group-item list-group-item-primary">2013</li>
+              <li class="list-group-item list-group-item-secondary">
+                <table>
+                  <tr>
+                    <th>23.11</th>
+                    <td>CK13</td>
+                    <td>Novi Sad</td>
+                  </tr>
+                </table>
               </li>
             </ul>
           </div>
@@ -799,8 +1022,12 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="javascript/main.min.js"></script>
     <script src="javascript/wow.min.js"></script>
+    <script src="javascript/smooth-scroll.min.js"></script>
     <script>
       new WOW().init();
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 300
+      });
     </script>
   </body>
 </html>

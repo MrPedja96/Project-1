@@ -2,6 +2,16 @@ function reload() {
   location.reload(true);
 }
 
+var lh = document.getElementById('logo-header');
+
+/* IE and Edge optimization
+if (navigator.userAgent.indexOf('Edge') >= 0){
+  
+} else {
+  
+}
+*/
+
 (function($) {
   "use strict";
 
